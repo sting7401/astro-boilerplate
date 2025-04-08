@@ -7,9 +7,13 @@ import vue from '@astrojs/vue';
 
 import tailwindcss from '@tailwindcss/vite';
 
+import pocketbase from 'astro-pocketbase';
+
+import superforms from 'astro-superforms';
+
 // https://astro.build/config                 
 export default defineConfig({
-  integrations: [svelte(), vue(), solidJs(), react()],
+  integrations: [svelte(), vue(), solidJs(), react(), pocketbase(), superforms()],
 
   vite: {
     plugins: [tailwindcss()]
