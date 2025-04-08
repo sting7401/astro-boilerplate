@@ -1,0 +1,53 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ],
+  "compilerOptions": {
+        "module": "es2020", // 모듈 시스템 설정
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "target": "ESNEXT", // 컴파일 타겟 설정
+        "experimentalDecorators": true,
+        "useDefineForClassFields": false,
+        "allowJs": true, // JavaScript 파일 포함 여부
+        "checkJs": true, // JavaScript 오류 검사 여부
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowSyntheticDefaultImports": true,
+        "allowImportingTsExtensions": true,
+        "isolatedModules": true,
+        "moduleDetection": "force",
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "react",
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "outDir": "./public", // 컴파일된 파일의 출력 디렉토리
+        "baseUrl": ".", // 모듈 해상도의 기준 경로
+        "paths": {
+            "$/*": ["./src/*"],
+            "$lib/*": ["./src/lib/*"],
+            "$images/*": ["./static/images/*"],
+            "$css/*": ["./src/css/*"],
+            "$common/*": ["./src/js/common/*"],
+            "$components/*": ["./src/components/*"],
+            "$state/*": ["./src/state/*"],
+            "$store/*": ["./src/store/*"],
+            "$event/*": ["./src/event/*"],
+            "$events/*": ["./src/events/*"],
+            "$utils/*": ["./src/utils/*"],
+            "$types/*": ["./src/types/*"],
+            "$json/*": ["./src/json/*"],
+            "$html/*": ["./public/html/*"],
+            "$layouts/*": ["./astro/layouts/*"],
+            "$pages/*": ["./astro/pages/*"]
+        }
+    },
+}
